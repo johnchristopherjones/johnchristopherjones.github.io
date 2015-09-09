@@ -1,3 +1,5 @@
+---
+---
 How do I use the Steam API in my web app?
 ====================
 
@@ -29,11 +31,33 @@ Software required:
 
 Software recommended:
 
-- [Postman] (alternative: `curl`)
+- [Postman] \(alternative: `curl`)
 
 [node]: https://nodejs.org
 [npm]: https://www.npmjs.com
 [Postman]: https://www.getpostman.com
+
+
+Follow along
+------------
+To try out the examples as you read along, live:
+
+1.  Make a folder somewhere,
+2.  [Download and Save this file]
+    (https://gist.github.com/johnchristopherjones/c6c8928d2ffa5ccbda6a) as
+    `server.js` in the new folder.
+3.  Open a terminal and `cd` to the new folder.
+4.  Type `npm install express request` to install `express` and
+    `request` locally
+5.  Type `node server.js` to start the server.
+6.  Try opening URLs mentioned below in your browser.
+
+To stop the server, return to the terminal and type `⌃C` (control-c)
+in the terminal.
+
+To make changes to the server, edit server.js.  Stop the server with `⌃C`
+and start it up again with `node server.js`.
+
 
 Steam API
 ---------
@@ -59,6 +83,7 @@ certain kinds of text files.  We're about to do that to "server".
 [Steam API]: http://steamcommunity.com/dev
 [API key]: https://steamcommunity.com/dev/apikey
 
+
 What's an API key?
 ------------------
 An API key is basically a password.  Without a valid key, the server that hosts
@@ -77,11 +102,13 @@ reasons API providers should do this:
 In the examples that follow you'll need to replace YOURSTEAMAPIKEYHERE with
 your Steam API key.
 
+
 ### Get your Steam API Key
 
 Just go to the Steam [API Key] page and sign up.  It's a shockingly painless
 process.  Once you've got your key, keep it in a safe spot and never share it
 with anyone.  That means keeping it out of Github.
+
 
 Get started
 ---------------
@@ -119,17 +146,18 @@ However, the `.get()` method is a little more powerful.  It lets you bind
 different event handlers for different URLs.  For example, the following
 handler responds to GET requests for the root-level URL (e.g., index.html).
 
-Our handler is passed two objects: the original httpRequest and the
-nascent httpResponse.  We manipulate the httpResponse however we want
-before finishing up & sending it on its way with the `.send()` method.
-The `.send()` method can used all by itself by passing it the
-content you want to send.
-
 ```js
 app.get('/', function(httpRequest, httpResponse) {
     httpResponse.send('Hello, World!');
 });
 ```
+
+Our handler is passed two objects: the original httpRequest and a
+new httpResponse.  The new httpResponse is a brand new object that hasn't been
+sent to the web browser yet.  We manipulate the httpResponse however we want
+before finishing up and sending it on its way with the `.send()` method.
+The `.send()` method can used all by itself by passing it the
+content you want to send.
 
 And here's a GET event handler for a different URL.
 
@@ -141,6 +169,7 @@ app.get('/hello-frank', function(httpRequest, httpResponse) {
 
 
 ### A quick aside:
+
 We've just bound event handlers for two events for the HTTP GET method.
 We can also bind event handlers for different HTTP methods.
 
@@ -152,6 +181,7 @@ app.post('/hello-frank', function(httpRequest, httpResponse) {
     httpResponse.send("No, Frank. You're not allowed to post.");
 });
 ```
+
 
 Add parameters to the path
 --------------------------
@@ -194,6 +224,7 @@ request.get(url, function(error, steamHttpResponse, steamHttpBody) {
     console.log(steamHttpBody);
 });
 ```
+
 
 Put it all together
 -------------------
@@ -238,13 +269,16 @@ app.get('/steam/game/:appid/achievements', function(httpRequest, httpResponse) {
 });
 ```
 
+
 Host static files
 -----------------
 What about your static files like `index.html` and `my-angular-app.js`?
 You might expect from the preceding that we'd need to bind event handlers
 for every path.  Well, maybe we can get clever and use those parameters
 in the path.  We'd need to learn how to read files from the filesystem
-and… ugh.  Yep, We can totally do that.  No, we're not going to do that.
+and… ugh.  Yep, We can totally do that.
+
+No, we're not going to do that.
 
 This is such a common problem that Express has included
 a piece of software to handle it.  This software is called
@@ -261,6 +295,7 @@ in a web browser at [http://localhost:4000/static/index.html]
 app.use('/', express.static('public'));
 ```
 
+
 ### Why `/static`?
 
 You could totally just use `/`.  It's your choice.
@@ -269,6 +304,7 @@ If you accidentally name a file in a way that matches a path that's handled
 by one of your HTTP event handlers, the file wins.
 But, you don't really want to have to remember that.
 Careful file naming can prevent these problems.
+
 
 ### Why `app.use`; why not `app.get`?
 
@@ -289,7 +325,6 @@ event handler.  So, `app.use` saves us a ton of work.
 
 What was httpRequest for?
 -------------------------
-
 What about that httpRequest parameter?  We haven't done much with it yet.
 Typically HTTP GET requests don't have a body, but that's not the case
 with POST and PUT.  When a web browser sends new data to the server,
@@ -324,9 +359,9 @@ app.post('/frank-blog', function(httpRequest, httpResponse) {
 });
 ```
 
+
 Start the server
 ----------------
-
 Finally, we just add a few lines at the end of the file to start up the Express
 server.
 
@@ -336,19 +371,12 @@ var server = app.listen(port);
 console.log('Listening on port ' + port);
 ```
 
-To run this server, live:
-
-1.  Make a folder somewhere,
-2.  Save [this file]
-    (https://gist.github.com/johnchristopherjones/c6c8928d2ffa5ccbda6a) as `server.js` in the new folder.
-3.  Open a terminal and `cd` to the new folder.
-4.  Type `npm install express request` to install `express` and
-    `request` locally
-5.  Type `node server.js` to start the server.
-6.  Try opening URLs mentioned above in your browser.
+That's it.  Just run this file ([`server.js`]
+((https://gist.github.com/johnchristopherjones/c6c8928d2ffa5ccbda6a)))
+with the command `node server.js`.
 
 To stop the server, return to the terminal and type `⌃C` (control-c)
 in the terminal.
 
-To make changes to the server, edit server.js.  The stop the server with ⌃C
+To make changes to the server, edit server.js.  Stop the server with ⌃C
 and start it up again with `node server.js`.
