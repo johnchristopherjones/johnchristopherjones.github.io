@@ -1,1 +1,0 @@
-/Users/jcj/.dotfiles/bin/to-gist.sh
