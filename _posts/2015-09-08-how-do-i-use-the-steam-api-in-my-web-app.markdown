@@ -1,5 +1,3 @@
----
----
 How do I use the Steam API in my web app?
 ====================
 
@@ -132,7 +130,7 @@ which wraps HTTP up into familiar Javascript objects and events.
 var express = require('express');
 ```
 
-Create an Express server (not yet running) so we can configure it.
+Create an Express server (not yet running) so we can configure it.  At the end, we'll make the server run with `app.listen()`.
 
 ```js
 var app = express();
@@ -372,7 +370,7 @@ console.log('Listening on port ' + port);
 ```
 
 That's it.  Just run this file ([`server.js`]
-((https://gist.github.com/johnchristopherjones/c6c8928d2ffa5ccbda6a)))
+(https://gist.github.com/johnchristopherjones/c6c8928d2ffa5ccbda6a))
 with the command `node server.js`.
 
 To stop the server, return to the terminal and type `⌃C` (control-c)

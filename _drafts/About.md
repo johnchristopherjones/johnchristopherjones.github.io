@@ -5,7 +5,7 @@ The best way to make first contact with me is via Twitter [@teluial](https://twi
 
 Education
 ---------
-I hold a BA in Physics from the University of Virginia, where I developed experience with CMSROOT, LabView, NumPy/SciPy, Mathematica, and LaTeX while working with the High Energy Physics department on the vacuum photo-tridodes that went into the electrocalorimeter of the CMS experiment at the LHC at CERN.
+I hold a BA in Physics from the University of Virginia, where I gained experience with CMSROOT, LabView, NumPy/SciPy, Mathematica, and LaTeX while working with the High Energy Physics department on the vacuum photo-tridodes that went into the electrocalorimeter of the CMS experiment at the LHC at CERN.
 
 Programming Experience
 ----------------------
