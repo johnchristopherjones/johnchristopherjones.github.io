@@ -1,16 +1,18 @@
-highlighter: pygments
+title: Vorpal Club
+email: jcj@vorpal.club
+description: > # this means to ignore newlines until "baseurl:"
+  One, two! One, two! And through and through The vorpal club went snicker-THWACK!
+  AppleScript, FileMaker, JavaScript, Python, and a smattering of physics.
+
+  The personal website of JCJ. Any expressions are not representative of
+  anyone else.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jekyll.vorpal.club" # the base hostname & protocol for your site
+twitter_username: teluial
+github_username:  johnchristopherjones
+
+# Build settings
+markdown: kramdown
+kramdown:
+    input: GFM
 permalink: /:year/:month/:day/:title
-exclude:
-    - Gemfile
-    - Gemfile.lock
-    - package.json
-    - init.sh
-include:
-    - .htaccess
-
-host: 127.0.0.1
-port: 8001
-
-markdown: redcarpet
-redcarpet:
-    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]

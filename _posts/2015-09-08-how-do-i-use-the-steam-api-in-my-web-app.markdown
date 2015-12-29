@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "How do I use the Steam API in my web app?"
+date:   2015-09-08 21:46:39 -0500
+tags: steam, nodejs
+---
 How do I use the Steam API in my web app?
 ====================
 
