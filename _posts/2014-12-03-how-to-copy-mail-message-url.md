@@ -30,7 +30,7 @@ I [posted about this on the Evernote forums](https://discussion.evernote.com/top
 
 ## How does this work?
 
-Every message has a unique ID, and both iOS and OS X implement a URL scheme for mail messages based on that unique ID.  That scheme is `message://`.  Now, this really should be be a [URN](http://en.wikipedia.org/wiki/Uniform_resource_name), not a [URI](http://en.wikipedia.org/wiki/Uniform_resource_locator#cite_note-10), but nobody likes URNs and nobody does them right.<sup>[<a href="http://en.wikipedia.org/wiki/Uniform_resource_identifier">Citation Needed</a>]</sup>
+Every message has a unique ID, and both iOS and OS X implement a URL scheme for mail messages based on that unique ID.  That scheme is `message://`.  Now, this really should be be a [URN](https://en.wikipedia.org/wiki/Uniform_resource_name), not a [URI](https://en.wikipedia.org/wiki/Uniform_resource_locator#cite_note-10), but nobody likes URNs and nobody does them right.<sup>[<a href="https://en.wikipedia.org/wiki/Uniform_resource_identifier">Citation Needed</a>]</sup>
 
 If you drag a Mail message into a text field, you'll get something that looks like this:
 
@@ -52,4 +52,4 @@ But, if you don't register your URN then you can't do this.  (Another reason peo
 
 ## Credits
 
-I first read about this on [Daring Fireball](http://daringfireball.net/2007/12/message_urls_leopard_mail).  MacStories [covered most of this](http://www.macstories.net/tutorials/send-selected-mail-message-to-evernote-with-source-url/) back in 2012.
+I first read about this on [Daring Fireball](https://daringfireball.net/2007/12/message_urls_leopard_mail).  MacStories [covered most of this](https://www.macstories.net/tutorials/send-selected-mail-message-to-evernote-with-source-url/) back in 2012.

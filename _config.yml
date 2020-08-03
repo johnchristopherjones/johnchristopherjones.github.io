@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The personal website of JCJ. Any expressions are not representative of
   anyone else.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jekyll.vorpal.club" # the base hostname & protocol for your site
+url: "https://www.vorpal.club" # the base hostname & protocol for your site
 twitter_username: teluial
 github_username:  johnchristopherjones
 

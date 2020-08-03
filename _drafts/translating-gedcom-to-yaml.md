@@ -9,7 +9,7 @@ Personally, I have trouble sustaining interest in geneology, but I have a bucket
 
 Nonetheless, geneology has some technical challenges that are very interesting.  Maintaining the geneological proof standards is difficult.  While many people have come up with different solutions, it's not a properly solved problem yet.  Sharing that information with others in some way that is both trusted and easy is not a solved problem either.  The “gold standard” in this sharing mechanism even today in 2014 is emailing GEDCOM files backed up with some Word documents.
 
-While I certainly look forward to [GEDCOM X](https://github.com/FamilySearch/gedcomx) developing into something respectable, [GEDCOM](http://en.wikipedia.org/wiki/GEDCOM) is the interchange format of today (2014).  Yech.
+While I certainly look forward to [GEDCOM X](https://github.com/FamilySearch/gedcomx) developing into something respectable, [GEDCOM](https://en.wikipedia.org/wiki/GEDCOM) is the interchange format of today (2014).  Yech.
 
 GEDCOM is an old and ugly format designed that seems to have been designed in order to display well on IBM 80x24 character terminals.  There was never a good reason to do this.  An examplary GEDCOM file looks like this:
 
@@ -73,4 +73,4 @@ individual: &I25
         spouse-of: *F12
 ```
 
-It looks like Florian Gross [has written a script to do this](http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/119415), in Ruby.
+It looks like Florian Gross [has written a script to do this](https://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/119415), in Ruby.

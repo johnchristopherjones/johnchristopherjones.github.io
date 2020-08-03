@@ -11,7 +11,7 @@ I used to save articles I found on the web as PDFs and threw them into a folder.
 
 These days I use Evernote for such things and old content has become harder to locate or harder to even remember that it exists. So, I decided to import it into Evernote.
 
-Evernote makes this *sort of* easy. You can actually just drag files onto Evernote and create notes that way. That's fine for recent stuff. However, one way I simplify my Evernote organization is to [use the creation and modification date of notes](http://www.jamierubin.net/2013/01/29/going-paperless-a-closer-look-at-how-i-organize-my-notes-in-evernote/), like [Evernote Ambassador Jamie Todd Rubin](http://www.jamierubin.net/going-paperless/). So, I wanted a couple of things:
+Evernote makes this *sort of* easy. You can actually just drag files onto Evernote and create notes that way. That's fine for recent stuff. However, one way I simplify my Evernote organization is to [use the creation and modification date of notes](https://www.jamierubin.net/2013/01/29/going-paperless-a-closer-look-at-how-i-organize-my-notes-in-evernote/), like [Evernote Ambassador Jamie Todd Rubin](https://www.jamierubin.net/going-paperless/). So, I wanted a couple of things:
 
   1. One note should be created for each file.
   2. Each note should be named after the filename.
@@ -58,4 +58,4 @@ end repeat
 
 Once I'd written this script, I could just select the files I wanted to import and run the script. In Finder, the files would receive the green “Evernote” tag, and in Evernote they would show up with their original filename as the title, their original file path as the source URL, and the creation and modification timestamp of the original file.
 
-For a quick script I would create a [Keyboard Maestro](http://www.keyboardmaestro.com/) macro, but I actually created [an Automator Service](https://dl.dropboxusercontent.com/u/10516852/Add%20to%20Evernote%20with%20file%20date.zip) so the feature would show up in the context menu in Finder when I right-click on files. Just extract the archive and double-click the Automator service to install it in OS X 10.9 (“Mavericks”) and up. You can also set a keyboard shortcut through Keyboard Preferences for any menu item, including services you create with Automator.
+For a quick script I would create a [Keyboard Maestro](https://www.keyboardmaestro.com/) macro, but I actually created [an Automator Service](https://dl.dropboxusercontent.com/u/10516852/Add%20to%20Evernote%20with%20file%20date.zip) so the feature would show up in the context menu in Finder when I right-click on files. Just extract the archive and double-click the Automator service to install it in OS X 10.9 (“Mavericks”) and up. You can also set a keyboard shortcut through Keyboard Preferences for any menu item, including services you create with Automator.

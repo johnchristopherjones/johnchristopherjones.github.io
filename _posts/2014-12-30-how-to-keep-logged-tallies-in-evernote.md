@@ -22,7 +22,7 @@ So, you have a few problems.
 
 We can accomplish this by appending entries to an Evernote note just fine, but the automatable stuff should be automated.  It'd be nice to just fire a script from any application and have a dialog pop up to ask us if we want to add a comment.  Add your comment or not then hit enter.  Automatically, your log is  appended with your comment (if any) and the current timestamp.  The header for today is also updated with the current tally for the day.
 
-So, here's a script to do just that.  It adds log entries to a note named "My Log Note" (change it in the second line of the script).  If the note doesn't exist, it'll be created.  Add it to a macro in [Keyboard Maestro](http://www.keyboardmaestro.com/main/) or the [Script System Menu](http://vorpal.club/how-do-i-use-applescript#script-menu) and you're good to go.
+So, here's a script to do just that.  It adds log entries to a note named "My Log Note" (change it in the second line of the script).  If the note doesn't exist, it'll be created.  Add it to a macro in [Keyboard Maestro](https://www.keyboardmaestro.com/main/) or the [Script System Menu](https://vorpal.club/how-do-i-use-applescript#script-menu) and you're good to go.
 
 ```AppleScript
 -- The tally note should have this title (change it to whatever you like)

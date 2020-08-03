@@ -12,7 +12,7 @@ in Javascript, though you might or might not be a “[ninja]”,
 and you've been learning some [Angular], [Ember], or maybe [jQuery].
 
 [angular]: https://angularjs.org
-[ember]: http://emberjs.com
+[ember]: https://emberjs.com
 [ninja]: https://www.manning.com/books/secrets-of-the-javascript-ninja
 [jQuery]: https://jquery.com
 
@@ -84,7 +84,7 @@ like "source code".  I'm sure there was a time for you when "source code"
 was an intimidating word.  Now it's just a kinda-descriptive word for
 certain kinds of text files.  We're about to do that to "server".
 
-[Steam API]: http://steamcommunity.com/dev
+[Steam API]: https://steamcommunity.com/dev
 [API key]: https://steamcommunity.com/dev/apikey
 
 
@@ -130,7 +130,7 @@ HTTP is a simple protocol composed entirely of text.  However, we're going
 to side-step a lot of tedious text manipulation by using [Express],
 which wraps HTTP up into familiar Javascript objects and events.
 
-[Express]: http://expressjs.com
+[Express]: https://expressjs.com
 
 ```js
 var express = require('express');
@@ -178,7 +178,7 @@ We've just bound event handlers for two events for the HTTP GET method.
 We can also bind event handlers for different HTTP methods.
 
 Launch [Postman] and try making both GET and POST requests to
-[http://localhost:4000/hello-frank](http://localhost:4000/hello-frank).
+[https://localhost:4000/hello-frank](https://localhost:4000/hello-frank).
 
 ```js
 app.post('/hello-frank', function(httpRequest, httpResponse) {
@@ -192,8 +192,8 @@ Add parameters to the path
 Express also lets us define variables in the path.  These variables
 will be stored by Express in the `httpRequest.params` object.
 We can then use those variables to construct a response.
-Open a web browser to [http://localhost:4000/steam/hello/Rachel]
-(http://localhost:4000/steam/hello/Rachel).
+Open a web browser to [https://localhost:4000/steam/hello/Rachel]
+(https://localhost:4000/steam/hello/Rachel).
 
 Try changing "Rachel" in the URL in the browser.
 
@@ -216,7 +216,7 @@ var request = require('request');
 Calculate the Steam API URL we want to use
 
 ```js
-var url = 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/' +
+var url = 'https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/' +
     'v2/?key=YOURSTEAMAPIKEYHERE&appid=8930';
 ```
 
@@ -237,13 +237,13 @@ Now we can try something a little fancier.  We can use the `request` package
 to send our own HTTP requests to third parties.  We can use the third-party's
 response to help construct our own response.
 
-Open a web browser to [http://localhost:4000/steam/civ5achievements]
-(http://localhost:4000/steam/civ5achievements).
+Open a web browser to [https://localhost:4000/steam/civ5achievements]
+(https://localhost:4000/steam/civ5achievements).
 
 ```js
 app.get('/steam/civ5achievements', function(httpRequest, httpResponse) {
     // Calculate the Steam API URL we want to use
-    var url = 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/' +
+    var url = 'https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/' +
         'v2/?key=YOURSTEAMAPIKEYHERE&appid=8930';
     request.get(url, function(error, steamHttpResponse, steamHttpBody) {
         // Once we get the body of the steamHttpResponse, send it to our client
@@ -256,14 +256,14 @@ app.get('/steam/civ5achievements', function(httpRequest, httpResponse) {
 
 Combine the previous two techniques (variables in paths, request package).
 
-Open a web browser to [http://localhost:4000/steam/game/8930/achievements]
-(http://localhost:4000/steam/game/8930/achievements) then try changing `8930`
+Open a web browser to [https://localhost:4000/steam/game/8930/achievements]
+(https://localhost:4000/steam/game/8930/achievements) then try changing `8930`
 (Civ5) to `292030` (Witcher 3).
 
 ```js
 app.get('/steam/game/:appid/achievements', function(httpRequest, httpResponse) {
     // Calculate the Steam API URL we want to use
-    var url = 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/' +
+    var url = 'https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/' +
         'v2/?key=YOURSTEAMAPIKEYHERE&appid=' +
         httpRequest.params.appid;
     request.get(url, function(error, steamHttpResponse, steamHttpBody) {
@@ -292,8 +292,8 @@ in the 'public' folder.  All you need to do is to tell Express when to
 use it.  To tell express when to to call the new handler, use `app.use`.
 
 After you call `app.use`, files like 'public/index.html' can be accessed
-in a web browser at [http://localhost:4000/static/index.html]
-(http://localhost:4000/static/index.html).
+in a web browser at [https://localhost:4000/static/index.html]
+(https://localhost:4000/static/index.html).
 
 ```js
 app.use('/', express.static('public'));
@@ -345,7 +345,7 @@ don't give users an easy way to make an HTTP POST.
 
 Just to show how this works, we'll just write the HTTP POST body to the
 console.  So, open up Postman and make an HTTP POST to
-[http://localhost:4000/frank-blog](http://localhost:4000/frank-blog).
+[https://localhost:4000/frank-blog](https://localhost:4000/frank-blog).
 
 To constuct your request in Postman, click the 'GET' dropdown next
 to the URL and change to POST, then click the 'BODY' tab and choose

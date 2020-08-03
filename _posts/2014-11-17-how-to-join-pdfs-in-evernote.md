@@ -21,7 +21,7 @@ I've had an itch for the same feature.  It turns out that this is totally do-abl
 -- inspired by
 -- https://discussion.evernote.com/topic/75343-feature-request-ability-to-combine-not-merge-individual-pdf-notes/?locale=en
 -- https://discussion.evernote.com/topic/24388-how-to-access-note-attachments-with-applescript/
--- http://applehelpwriter.com/2013/03/23/how-to-merge-pdf-files-in-os-x/
+-- https://applehelpwriter.com/2013/03/23/how-to-merge-pdf-files-in-os-x/
 
 -- We'll join note titles together using this string
 -- This isn't going to be a great title, but it'll be
@@ -36,8 +36,8 @@ set output_filepath to temp_folder & "/" & (do shell script "uuidgen") & ".pdf"
 -- XSLT used to extract hash values from en-media tags
 -- Crazy {} translation nonsense used to work around forum post scrubbers
 set xslt to "{?xml version='1.0'?}
-{xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
-                xmlns:en='http://xml.evernote.com/pub/enml2.dtd'}
+{xsl:stylesheet version='1.0' xmlns:xsl='https://www.w3.org/1999/XSL/Transform'
+                xmlns:en='https://xml.evernote.com/pub/enml2.dtd'}
     {xsl:output method='text' omit-xml-declaration='yes' indent='no'/}
     {xsl:strip-space elements='*'/}
     {xsl:template match='en-media'}
@@ -116,9 +116,9 @@ end tell
 
 ## Installation
 
-I highly recommend [Keyboard Maestro](http://www.keyboardmaestro.com/) as an easy way to assign keyboard shortcuts to AppleScript scripts.
+I highly recommend [Keyboard Maestro](https://www.keyboardmaestro.com/) as an easy way to assign keyboard shortcuts to AppleScript scripts.
 
-However, a free way to conveniently use this script is to [activate the script menu](http://vorpal.club/how-do-i-use-applescript#script-menu) via OS X's Script Editor, then save the script to the Evernote scripts folder.  You'll then be able to run the script from the script menu.
+However, a free way to conveniently use this script is to [activate the script menu](https://vorpal.club/how-do-i-use-applescript#script-menu) via OS X's Script Editor, then save the script to the Evernote scripts folder.  You'll then be able to run the script from the script menu.
 
 ## Disclaimer
 
@@ -133,4 +133,4 @@ I needed to accomplish a few things with this script:
  3. join the attachments, and finally
  4. create a new note and attach the joined document.
 
-I learned from [philastokes's 2013-03-23 post](http://applehelpwriter.com/2013/03/23/how-to-merge-pdf-files-in-os-x/) that OS X comes with a bundled python script to join PDFs as part of the "Combine PDF Pages" Automator action.  Back in 2012 on the Evernote forums, [iNik demonstrated writing attachments from Evernote](https://discussion.evernote.com/topic/24388-how-to-access-note-attachments-with-applescript/).  The official [Evernote AppleScript Examples](https://dev.evernote.com/doc/articles/applescript.php) showed me the rest of the Evernote-specific stuff.
+I learned from [philastokes's 2013-03-23 post](https://applehelpwriter.com/2013/03/23/how-to-merge-pdf-files-in-os-x/) that OS X comes with a bundled python script to join PDFs as part of the "Combine PDF Pages" Automator action.  Back in 2012 on the Evernote forums, [iNik demonstrated writing attachments from Evernote](https://discussion.evernote.com/topic/24388-how-to-access-note-attachments-with-applescript/).  The official [Evernote AppleScript Examples](https://dev.evernote.com/doc/articles/applescript.php) showed me the rest of the Evernote-specific stuff.

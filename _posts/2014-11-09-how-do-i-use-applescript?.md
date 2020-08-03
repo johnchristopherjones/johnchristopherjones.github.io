@@ -40,7 +40,7 @@ To run the application you just created, just double-click it from wherever you 
 
 ### <a name="script-menu"/>The Script System Menu (disabled by default)
 
-Script Editor lets you enable a Script [status menu](http://support.apple.com/en-us/HT3737) item.  This is hidden in the General tab of Script Editor's preferences (Menu bar » Script Editor » Preferences).  When this status menu item is enabled, you'll have quick access to any scripts that you've saved in specific folders.  When you save a script in the correct folder, it automatically shows up in this menu.
+Script Editor lets you enable a Script [status menu](https://support.apple.com/en-us/HT3737) item.  This is hidden in the General tab of Script Editor's preferences (Menu bar » Script Editor » Preferences).  When this status menu item is enabled, you'll have quick access to any scripts that you've saved in specific folders.  When you save a script in the correct folder, it automatically shows up in this menu.
 
 You can reveal these special locations by clicking on the Script Menu icon, expanding the "Open Scripts Folder" sub-menu, and choosing one of the options, which will be:
 
@@ -122,7 +122,7 @@ The native ways can be a little out-of-the-way or scattered, so various third-pa
 
 ### Keyboard Maestro
 
-[Keyboard Maestro](http://www.keyboardmaestro.com) can be thought of as a phenomenally easier-to-use variant on the built-in `Automator.app` method.  Keyboard Maestro lets you define macros that can run when various events happen on your system.  These events can include:
+[Keyboard Maestro](https://www.keyboardmaestro.com) can be thought of as a phenomenally easier-to-use variant on the built-in `Automator.app` method.  Keyboard Maestro lets you define macros that can run when various events happen on your system.  These events can include:
 
  - typing keys or key combos;
  - switching, opening, or closing an app;
@@ -135,4 +135,4 @@ The native ways can be a little out-of-the-way or scattered, so various third-pa
 
 ### Alfred
 
- Alfred is something I don't personally use.  However, it's like a friendlier version of Automator married with Keyboard Maestro.  It looks a lot more like Automator, and Alfred [documents how to run scripts](http://support.alfredapp.com/tutorials:hotkeys) well enough that I won't repeat them.
+ Alfred is something I don't personally use.  However, it's like a friendlier version of Automator married with Keyboard Maestro.  It looks a lot more like Automator, and Alfred [documents how to run scripts](https://support.alfredapp.com/tutorials:hotkeys) well enough that I won't repeat them.

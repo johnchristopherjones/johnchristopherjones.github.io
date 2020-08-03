@@ -188,7 +188,7 @@ Note that OpenID identifiers, while technically usernames, are actually
 formatted as URLs.  A typical Steam OpenID identifier (called the *Claimed ID*)
 is:
 
-    http://steamcommunity.com/openid/id/76561197975696140
+    https://steamcommunity.com/openid/id/76561197975696140
 
 The digits after `/id/` are the 64-bit Steam ID, used in various Steam Web API
 requests.
@@ -206,11 +206,11 @@ we could add multiple identities for a user if we had a use for it.
 var OpenIDStrategy = require('passport-openid').Strategy;
 var SteamStrategy = new OpenIDStrategy({
         // OpenID provider configuration
-        providerURL: 'http://steamcommunity.com/openid',
+        providerURL: 'https://steamcommunity.com/openid',
         stateless: true,
         // How the OpenID provider should return the client to us
-        returnURL: 'http://localhost:4000/auth/openid/return',
-        realm: 'http://localhost:4000/',
+        returnURL: 'https://localhost:4000/auth/openid/return',
+        realm: 'https://localhost:4000/',
     },
     // This is the "validate" callback, which returns whatever object you think
     // should represent your user when OpenID authentication succeeds.  You
@@ -368,7 +368,7 @@ app.get('/', function(request, response) {
         }
         response.write('<form action="/auth/openid" method="post">');
         response.write(
-            '<input name="submit" type="image" src="http://steamcommunity-a.' +
+            '<input name="submit" type="image" src="https://steamcommunity-a.' +
             'akamaihd.net/public/images/signinthroughsteam/sits_small.png" ' +
             'alt="Sign in through Steam"/></form>');
     }
@@ -384,7 +384,7 @@ console.log('Listening on port ' + port);
 ```
 
 Alright!  Start your server with `node server.js` and now you can go
-to <http://localhost:4000/> and there's a "Log in through Steam" buton.
+to <https://localhost:4000/> and there's a "Log in through Steam" buton.
 Click it and you'll go to Steam's site to log in.  You'll then be returned
 to `/auth/openid/return`, which we just redirect back to `/`.
 
@@ -393,5 +393,5 @@ to `/auth/logout`.  The server will nuke the session and redirect them back
 to `/` again.
 
 If you're having trouble, you can
-[download this article from gist](http://git.io/vc7UB)
+[download this article from gist](https://git.io/vc7UB)
 as an executable `node.js` file.

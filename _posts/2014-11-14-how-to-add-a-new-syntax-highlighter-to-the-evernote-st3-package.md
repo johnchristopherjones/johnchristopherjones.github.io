@@ -11,7 +11,7 @@ I recently added FileMaker syntax highlighting to the Evernote package for Subli
 
 1.  Write your lexer as a pygments plugin.
 
-    This is the hard part.  You'll need the [pygments documentation](http://pygments.org/docs/) to do this.  You can use my [FileMaker lexer](https://github.com/johnchristopherjones/FileMakerLexer) as a starting point, or you can use [my previous post](http://vorpal.club/my-quest-to-add-filemaker-calculations-to-pygments) as a guide.
+    This is the hard part.  You'll need the [pygments documentation](https://pygments.org/docs/) to do this.  You can use my [FileMaker lexer](https://github.com/johnchristopherjones/FileMakerLexer) as a starting point, or you can use [my previous post](https://vorpal.club/my-quest-to-add-filemaker-calculations-to-pygments) as a guide.
 
     Don't forget to include the `__all__` variable in your lexer's module scope.
 
@@ -41,7 +41,7 @@ I recently added FileMaker syntax highlighting to the Evernote package for Subli
     ```bash
     $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Evernote/lib/
     $ rm -r pygments
-    $ hg clone http://bitbucket.org/birkenfeld/pygments-main pygments-main
+    $ hg clone https://bitbucket.org/birkenfeld/pygments-main pygments-main
     $ ln -s pygments-main/pygments pygments
     ```
 

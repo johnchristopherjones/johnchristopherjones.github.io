@@ -7,8 +7,8 @@ notebook: Postach.io
 
 
 
-http://www.milanm.com/?p=491
-http://dev.mysql.com/downloads/connector/odbc/
+https://www.milanm.com/?p=491
+https://dev.mysql.com/downloads/connector/odbc/
 https://my.bluehost.com/cgi/help/89
 
 **Setting up ODBC to access FileMaker**

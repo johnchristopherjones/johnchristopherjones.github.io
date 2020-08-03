@@ -7,7 +7,7 @@ notebook: Postach.io
 
 I love to use Things, but it's got a few workflow problems. One of those problems is that it encourages you to capture, but assumes that whatever you capture is a “next actions” in GTD parlance. There's no easy way to promote a task to a project if that item needs to have sub-tasks.
 
-It turns out that [Things has a nice AppleScript API](http://downloads.culturedcode.com/things/download/ThingsAppleScriptGuide.pdf), so I fixed it.
+It turns out that [Things has a nice AppleScript API](https://downloads.culturedcode.com/things/download/ThingsAppleScriptGuide.pdf), so I fixed it.
 
 ```AppleScript
 tell application "Things"

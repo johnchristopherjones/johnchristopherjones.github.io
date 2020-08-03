@@ -9,7 +9,7 @@ This is not a short step-by-step howto, which I'll get to in a follow-up post.  
 
 I work in FileMaker a lot. I use Sublime to edit my FileMaker calculations thanks to the wonderful [Evernote package for Sublime Text 3](https://sublime.wbond.net/packages/Evernote).
 
-However, I want to add syntax highlighting for FileMaker calculations to my blog. To make that work, I need to create a Pygments lexer for FileMaker calculations. From the Pygments docs I was pretty sure I could work out the lexer—no problem. But, where do I put the code? I was pretty stumped by this, until I found [Jonas Lundberg's excellent guide](http://www.catchmecode.com/2013/03/custom-syntax-in-pygments.html).
+However, I want to add syntax highlighting for FileMaker calculations to my blog. To make that work, I need to create a Pygments lexer for FileMaker calculations. From the Pygments docs I was pretty sure I could work out the lexer—no problem. But, where do I put the code? I was pretty stumped by this, until I found [Jonas Lundberg's excellent guide](https://www.catchmecode.com/2013/03/custom-syntax-in-pygments.html).
 
 ### How to start a pygments lexer
 
@@ -46,7 +46,7 @@ setup (
 )
 ```
 
-The `entry_points` portion of this file will hook the egg into the pygments module as a plugin.  Pygments defines these [entry points](http://pygments.org/docs/plugins/).
+The `entry_points` portion of this file will hook the egg into the pygments module as a plugin.  Pygments defines these [entry points](https://pygments.org/docs/plugins/).
 
 I can't recall ever creating a `setup.py` before.  It seems a little spooky.  Suddenly I can run `python setup.py` and it has all sorts of package management options for my module.  Looking carefully at the above code, I see that I actually import the setup() function from setuptools and then call the setup() function with some options.  It's the setup() function that does all the magic.  It knows how to parse command line arguments and everything.
 
@@ -87,7 +87,7 @@ Now I can hack away on my lexer.py and run pygmentize against any test code I've
 $ pygmentize -f html -O full,encoding=utf-8,style=monokai test_data/script.fmscript > /tmp/test.html && open /tmp/test.html
 ```
 
-I bashed on my `lexer.py` until I was satisfied, [constantly referenceing the pygments docs](http://pygments.org/docs/lexerdevelopment/#adding-and-testing-a-new-lexer), and eventually arrived at [what I published on GitHub](https://github.com/johnchristopherjones/FileMakerLexer).
+I bashed on my `lexer.py` until I was satisfied, [constantly referenceing the pygments docs](https://pygments.org/docs/lexerdevelopment/#adding-and-testing-a-new-lexer), and eventually arrived at [what I published on GitHub](https://github.com/johnchristopherjones/FileMakerLexer).
 
 Once I'm happy with the lexer, if I don't need it globally available, I can uninstall it.
 
@@ -97,7 +97,7 @@ $ sudo python setup.py develop --uninstall
 
 ### Step 3: Install the Evernote ST3 package from GitHub instead of Package Control
 
-Up until now, I've just been making a lexer plugin.  I wrote the lexer as a plugin so my code would be testable, redistributable, and to create a clean development environment.  Now I need to get my lexer into the pygments module that's installed *inside the Evernote package for Sublime Text*.  Luckily adding a new lexer to pygments is described [in the pygments documentation](http://pygments.org/docs/lexerdevelopment/#adding-and-testing-a-new-lexer).
+Up until now, I've just been making a lexer plugin.  I wrote the lexer as a plugin so my code would be testable, redistributable, and to create a clean development environment.  Now I need to get my lexer into the pygments module that's installed *inside the Evernote package for Sublime Text*.  Luckily adding a new lexer to pygments is described [in the pygments documentation](https://pygments.org/docs/lexerdevelopment/#adding-and-testing-a-new-lexer).
 
 The particulars of installing my lexer inside the `pygments` module inside the Evernte package are a little different—at least up front.  The author of the Evernote package, [Emanuele D'Osualdo](https://github.com/bordaigorl), was very helpful here.
 
@@ -118,7 +118,7 @@ Restart Sublime Text and confirm that the Evernote package is working.  It may l
 
 ### Step 4: Hack pygments in the Evernote ST3 package
 
-Next, I need to dive into the pygments python module inside the Evernote package.  I'll be trying to figure out the [pygments docs](http://pygments.org/docs/lexerdevelopment/#adding-and-testing-a-new-lexer) here.  I need to "create a new module for your lexer class" in the `pygments/lexers` folder.  So:
+Next, I need to dive into the pygments python module inside the Evernote package.  I'll be trying to figure out the [pygments docs](https://pygments.org/docs/lexerdevelopment/#adding-and-testing-a-new-lexer) here.  I need to "create a new module for your lexer class" in the `pygments/lexers` folder.  So:
 
 ```bash
 $ cd Evernote/lib/pygments
@@ -150,7 +150,7 @@ Let's try just replacing the pygments folder outright.  Thanks to git, I can alw
 ```bash
 $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Evernote/lib/
 $ rm -r pygments
-$ hg clone http://bitbucket.org/birkenfeld/pygments-main pygments
+$ hg clone https://bitbucket.org/birkenfeld/pygments-main pygments
 -bash: hg: command not found
 ```
 
@@ -163,7 +163,7 @@ $ brew install hg
 Try again:
 
 ```bash
-$ hg clone http://bitbucket.org/birkenfeld/pygments-main pygments
+$ hg clone https://bitbucket.org/birkenfeld/pygments-main pygments
 ```
 
 Success?  The repo definitely downloaded correctly, but now I've lost all my highlghting in the Evernote package.
@@ -172,7 +172,7 @@ That's because the Evernote package's pygments is basically the `pygments` subfo
 
 ```bash
 $ rm -r pygments
-$ hg clone http://bitbucket.org/birkenfeld/pygments-main pygments-main
+$ hg clone https://bitbucket.org/birkenfeld/pygments-main pygments-main
 $ ln -s pygments-main/pygments pygments
 ```
 
